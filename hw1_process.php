@@ -15,7 +15,7 @@
 	
 	$msg_extra = "";
 
-if(!empty($package) && !empty($hour)){	
+if((!empty($package) || $package == 0)&& (!empty($hour) || $hour == 0)){	
 
 	if($package == 'A' || $package == 'a' || $package == 'B' || $package == 'b' || $package == 'C' || $package == 'c') {
 		
@@ -55,7 +55,10 @@ if(!empty($package) && !empty($hour)){
 		$msg = "Wrong package entered. Please return to the previous page and enter a valid package name.<br>";
 	
 	if($hour < 0)
-		$msg = $msg."The number of hours must be non-negative. Please return to the previous page and enter a valid value.";	
+		$msg = $msg."The number of hours must be non-negative. Please return to the previous page and enter a valid value.";
+	
+	if($hour == 0)
+		$msg = $msg."The number of hours must be greater than 0. Please return to the previous page and enter a valid value.";
 }
 else {
 	$msg = "Please enter both package and hours used.";
