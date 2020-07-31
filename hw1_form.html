@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head>
+		<title>Internet Packages</title>
+	</head>
+	
+	<body>
+		<fieldset>BCS350 Assignment 1 -- SAYED SHAD AHMAD ZAIDI</fieldset>
+		<p>
+			<b>Internet Service Packages</b><br>
+			Package A: For $19.95 per month, 200 hours of access are provided. Additional hours are $0.40 per hour.<br>
+			Package B: For $29.95 per month, 300 hours of access are provided. Additional hours are $0.35 per hour.<br>
+			Package C: For $39.95 per month, unlimited access is provided.<br>
+		</p>
+		<p>			
+			<form action="hw1_process.php" method="post">
+				<b>Enter your package and hours used:</b>
+				<table>
+					<tr>
+						<td>Package:</td>
+						<td><input type="text" max="1" name="plan" required></td>
+					</tr>
+					<tr>
+						<td>Hours:</td>
+						<td><input type="number" value="0" name="hour" required></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="submit">Calculate Monthly Charge</button></td>
+					</tr>
+				</table>
+			</form>
+		</p>
+	</body>
+	
+</html>
